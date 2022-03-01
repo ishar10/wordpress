@@ -8,3 +8,24 @@ CLI:
 -docker run -d --name wordpress-tut --link mariadblatest:mysql -p 8080:80 --platform linux/amd64 wordpress:4.6.1-php7.0-apache
  if facing problem starting the container:
 - (Delete the ib log file in the data directory if container keep on exiting)
+
+Reference:
+
+V imp for m1 :
+https://javascript.plainenglish.io/which-docker-images-can-you-use-on-the-mac-m1-daba6bbc2dc5
+
+Others:
+https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes
+
+https://www.youtube.com/watch?v=eBGvHkTFDTs
+
+https://hub.docker.com/_/mariadb
+
+https://stackoverflow.com/questions/42112752/mysql-server-shuts-down-frequently-and-wont-start-again-now
+
+https://itprohelper.com/the-requested-images-platform-linux-arm64-does-not-match-the-detected-host-platform/
+
+https://stackoverflow.com/questions/65456814/docker-apple-silicon-m1-preview-mysql-no-matching-manifest-for-linux-arm64-v8
+
+https://medium.com/tech-learn-share/docker-mysql-access-denied-for-user-172-17-0-1-using-password-yes-c5eadad582d3
+
