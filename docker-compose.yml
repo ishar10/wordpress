@@ -1,0 +1,26 @@
+version: '2'
+services:
+  db:
+    image: mariadb:10.2
+    volumes: [/Users/isharanka/wordpress/mariadb/data:/var/lib/mysql]
+    environment: 
+        MYSQL_ROOT_PASSWORD: 123
+    ports:
+       - 3308:3306
+  wordpress:
+    links:
+        - db:mysql
+    image: wordpress:php7.4
+    ports:
+        - 8082:80
+  phpmydmin:
+    image: phpmyadmin:latest
+    links:
+        - db:mysql
+    ports:
+        - 8181:80
+    environment:
+        MYSQL_USERNAME: root
+        MYSQL_ROOT_PASSWORD: 123
+
+
