@@ -1,0 +1,10 @@
+CLI:
+- Docker pull MariaDB:10.5
+- Mkdir project
+- Mkdir mariadb
+- Mkdir data
+- docker run -d -v /Users/isharanka/wordpress_project/mariadb/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123 -p 3307:3306 --platform linux/amd64 --name mariadblatest mariadb:10.5
+-docker pull wordpress:4.6.1-php7.0-apache
+-docker run -d --name wordpress-tut --link mariadblatest:mysql -p 8080:80 --platform linux/amd64 wordpress:4.6.1-php7.0-apache
+ if facing problem starting the container:
+- (Delete the ib log file in the data directory if container keep on exiting)
